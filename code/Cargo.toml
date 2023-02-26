@@ -1,0 +1,12 @@
+[profile.release]
+panic = "abort"
+opt-level = "s"
+overflow-checks = true
+
+[profile.dev]
+panic = "abort"
+
+[workspace]
+
+resolver = "2"
+members = ['compact_ecash', 'divisible_ecash']
