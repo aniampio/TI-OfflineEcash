@@ -1,10 +1,7 @@
-use rand::thread_rng;
-
 use crate::error::DivisibleEcashError;
-use crate::scheme::{PayInfo, Payment};
-use crate::scheme::aggregation::{aggregate_signatures, aggregate_verification_keys, aggregate_wallets};
-use crate::scheme::identification::identify;
-use crate::scheme::keygen::{PublicKeyUser, SecretKeyUser, ttp_keygen_authorities, VerificationKeyAuth};
+use crate::scheme::{PayInfo};
+use crate::scheme::aggregation::{aggregate_verification_keys, aggregate_wallets};
+use crate::scheme::keygen::{SecretKeyUser, ttp_keygen_authorities, VerificationKeyAuth};
 use crate::scheme::setup::{GroupParameters, Parameters};
 use crate::scheme::withdrawal::{issue, issue_verify, withdrawal_request};
 

@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/ania/Documents/Git/TI-OfflineEcash/target/release/build/typenum-c86d8245c94300e7/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/ania/Documents/Git/TI-OfflineEcash/target/release/build/typenum-c86d8245c94300e7/out/op.rs

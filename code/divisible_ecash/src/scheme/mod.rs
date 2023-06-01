@@ -1,5 +1,5 @@
 use std::cell::Cell;
-use std::convert::{TryFrom, TryInto};
+use std::convert::{TryInto};
 use std::ops::Neg;
 
 use bls12_381::{G1Projective, G2Prepared, G2Projective, pairing, Scalar};
@@ -463,11 +463,8 @@ impl Payment {
 
 #[cfg(test)]
 mod tests {
-    use std::convert::TryFrom;
-
     use rand::thread_rng;
-
-    use crate::scheme::{PayInfo, Phi, VarPhi, Wallet};
+    use crate::scheme::{Phi, VarPhi};
     use crate::scheme::aggregation::aggregate_verification_keys;
     use crate::scheme::keygen::{PublicKeyUser, ttp_keygen_authorities, VerificationKeyAuth};
     use crate::scheme::setup::{GroupParameters, Parameters};

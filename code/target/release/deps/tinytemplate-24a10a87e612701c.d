@@ -1,0 +1,12 @@
+/Users/ania/Documents/Git/TI-OfflineEcash/target/release/deps/tinytemplate-24a10a87e612701c.rmeta: /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/lib.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/compiler.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/error.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/instruction.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/syntax.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/template.rs
+
+/Users/ania/Documents/Git/TI-OfflineEcash/target/release/deps/libtinytemplate-24a10a87e612701c.rlib: /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/lib.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/compiler.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/error.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/instruction.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/syntax.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/template.rs
+
+/Users/ania/Documents/Git/TI-OfflineEcash/target/release/deps/tinytemplate-24a10a87e612701c.d: /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/lib.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/compiler.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/error.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/instruction.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/syntax.rs /Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/template.rs
+
+/Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/lib.rs:
+/Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/compiler.rs:
+/Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/error.rs:
+/Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/instruction.rs:
+/Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/syntax.rs:
+/Users/ania/.cargo/registry/src/github.com-1ecc6299db9ec823/tinytemplate-1.2.1/src/template.rs:

@@ -156,7 +156,7 @@ fn bench_divisible_ecash(c: &mut Criterion) {
         num_authorities: 100,
         threshold_p: 0.7,
         L: 100,
-        spend_vv: 10,
+        spend_vv: 1,
         case_nr_pub_keys: 99,
     };
 

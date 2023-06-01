@@ -1,17 +1,10 @@
 use std::borrow::Borrow;
-use std::convert::TryFrom;
-use std::convert::TryInto;
 
-use bls12_381::{G1Affine, G1Projective, Scalar};
+use bls12_381::{Scalar};
 use digest::Digest;
 use digest::generic_array::typenum::Unsigned;
-use group::GroupEncoding;
 use sha2::Sha256;
 
-use crate::error::{DivisibleEcashError, Result};
-use crate::scheme::keygen::PublicKeyUser;
-use crate::scheme::setup::GroupParameters;
-use crate::utils::try_deserialize_g1_projective;
 
 pub mod proof_withdrawal;
 pub mod proof_spend;

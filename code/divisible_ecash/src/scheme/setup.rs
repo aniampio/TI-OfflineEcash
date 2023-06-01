@@ -1,9 +1,5 @@
-use std::convert::TryFrom;
-use std::net::ToSocketAddrs;
-
-use bls12_381::{G1Affine, G1Projective, G2Affine, G2Prepared, G2Projective, pairing, Scalar};
+use bls12_381::{G1Affine, G1Projective, G2Affine, G2Prepared, G2Projective, Scalar};
 use ff::Field;
-use group::Curve;
 use rand::thread_rng;
 
 use crate::constants::L;

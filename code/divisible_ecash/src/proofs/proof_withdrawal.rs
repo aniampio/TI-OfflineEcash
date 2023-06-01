@@ -7,7 +7,7 @@ use itertools::izip;
 use crate::error::{DivisibleEcashError, Result};
 use crate::proofs::{ChallengeDigest, compute_challenge, produce_response, produce_responses};
 use crate::scheme::keygen::PublicKeyUser;
-use crate::scheme::setup::{GroupParameters, Parameters};
+use crate::scheme::setup::{Parameters};
 use crate::utils::try_deserialize_g1_projective;
 
 #[derive(Debug)]
@@ -259,7 +259,7 @@ mod tests {
     use group::Group;
     use rand::thread_rng;
 
-    use crate::scheme::setup::Parameters;
+    use crate::scheme::setup::{GroupParameters, Parameters};
     use crate::utils::hash_g1;
 
     use super::*;
@@ -288,7 +288,7 @@ mod tests {
 
     #[test]
     fn withdrawal_proof_construct_and_verify() {
-        let rng = thread_rng();
+        // let rng = thread_rng();
         let grp = GroupParameters::new().unwrap();
         let params = Parameters::new(grp.clone());
 

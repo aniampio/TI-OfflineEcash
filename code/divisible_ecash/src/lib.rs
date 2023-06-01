@@ -1,4 +1,4 @@
-use bls12_381::{G1Projective, G2Prepared, G2Projective, pairing, Scalar};
+use bls12_381::{Scalar};
 
 pub use scheme::aggregation::aggregate_verification_keys;
 pub use scheme::aggregation::aggregate_wallets;
@@ -14,8 +14,6 @@ pub use scheme::withdrawal::issue_verify;
 pub use scheme::withdrawal::withdrawal_request;
 pub use traits::Base58;
 
-use crate::error::DivisibleEcashError;
-use crate::traits::Bytable;
 
 mod error;
 mod proofs;

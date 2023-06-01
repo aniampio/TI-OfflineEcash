@@ -1,12 +1,11 @@
 use std::collections::{HashMap, HashSet};
 use std::ops::Neg;
 
-use bls12_381::{Gt, pairing, Scalar};
+use bls12_381::{Gt, pairing};
 use group::Curve;
 
 use crate::error::{DivisibleEcashError, Result};
 use crate::scheme::{PayInfo, Payment};
-use crate::scheme::identification::IdentifyResult::DoubleSpendingPublicKeys;
 use crate::scheme::keygen::{PublicKeyUser, VerificationKeyAuth};
 use crate::scheme::setup::Parameters;
 
@@ -21,7 +20,7 @@ pub enum IdentifyResult {
 // how do we get the list of all pkU ?
 pub fn identify(
     params: &Parameters,
-    verification_key: &VerificationKeyAuth,
+    _verification_key: &VerificationKeyAuth,
     public_keys_u: &HashSet<PublicKeyUser>,
     payment1: Payment,
     payment2: Payment,
@@ -41,7 +40,7 @@ pub fn identify(
     // compute the serial numbers fo k2 in [0, V2-1]
     let mut k1 = 0;
     let mut k2 = 0;
-    let mut duplicate_serial_numbers: Vec<(Gt, u64, u64)> = Default::default();
+    // let mut duplicate_serial_numbers: Vec<(Gt, u64, u64)> = Default::default();
     for j in 0..payment2.vv {
         let sn = pairing(&payment2.phi.1.to_affine(), &params_a.get_ith_delta(j as usize).to_affine())
             + pairing(&payment2.phi.0.to_affine(), &params_a.get_etas_ith_jth_elem(payment2.vv as usize, j as usize).to_affine());
@@ -82,17 +81,14 @@ pub fn identify(
 mod tests {
     use std::collections::HashSet;
 
-    use bls12_381::pairing;
-    use group::Curve;
     use rand::thread_rng;
 
-    use crate::scheme::{PayInfo, Payment};
+    use crate::scheme::{PayInfo};
     use crate::scheme::aggregation::{aggregate_verification_keys, aggregate_wallets};
     use crate::scheme::identification::{identify, IdentifyResult};
-    use crate::scheme::keygen::{PublicKeyUser, SecretKeyUser, ttp_keygen_authorities, VerificationKeyAuth};
+    use crate::scheme::keygen::{SecretKeyUser, ttp_keygen_authorities, VerificationKeyAuth};
     use crate::scheme::setup::{GroupParameters, Parameters};
     use crate::scheme::withdrawal::{issue, issue_verify, withdrawal_request};
-    use crate::utils::hash_g1;
 
     #[test]
     fn duplicate_payments_with_the_same_pay_info() {

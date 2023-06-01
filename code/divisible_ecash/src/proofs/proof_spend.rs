@@ -1,11 +1,10 @@
-use std::convert::TryFrom;
 use std::ops::Neg;
 
 use bls12_381::{G1Projective, G2Projective, Gt, Scalar};
 use group::GroupEncoding;
 
-use crate::proofs::{ChallengeDigest, compute_challenge, produce_response, produce_responses};
-use crate::scheme::{Phi, VarPhi, Wallet};
+use crate::proofs::{ChallengeDigest, compute_challenge, produce_response};
+use crate::scheme::{Phi, VarPhi};
 use crate::scheme::keygen::{SecretKeyUser, VerificationKeyAuth};
 use crate::scheme::setup::Parameters;
 
@@ -114,7 +113,7 @@ impl SpendProof {
         vv: u64) -> Self {
         let grp = params.get_grp();
         let params_u = params.get_params_u();
-        let params_a = params.get_params_a();
+        // let params_a = params.get_params_a();
 
         // generate random values to replace each witness
         let r_attributes = grp.n_random_scalars(2);
@@ -218,7 +217,7 @@ impl SpendProof {
     ) -> bool {
         let grp = params.get_grp();
         let params_u = params.get_params_u();
-        let params_a = params.get_params_a();
+        // let params_a = params.get_params_a();
         let g1 = grp.gen1();
 
         // re-compute each zkp commitment
@@ -296,7 +295,7 @@ mod tests {
 
     #[test]
     fn spend_proof_construct_and_verify() {
-        let rng = thread_rng();
+        // let rng = thread_rng();
         let grp = GroupParameters::new().unwrap();
         let params = Parameters::new(grp.clone());
         let params_u = params.get_params_u();
