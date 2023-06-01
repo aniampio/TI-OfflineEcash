@@ -5,7 +5,7 @@ This repository contains implementations of the Compact and Divisible E-cash wit
 - Compact Ecash with threshold issuance can be found in `code/compact/src`,
 - Divisible Ecash with threshold issuance can be found in `code/divisible/src`.
 
-The directory `extended_bls12_381` contains a copy of the [`bls12_381`](https://crates.io/crates/bls12_381) implementation with a set of changes required to implement our offline ecash.
+The directory `bls12_381` contains a copy of the [`bls12_381`](https://crates.io/crates/bls12_381) implementation with a set of changes required to implement our offline ecash.
 
 ## Running the docker
 To be able able to run it, you should have docker  and docker-compose installed. You can follow [this procedure](https://docs.docker.com/desktop/install/linux-install/) to install docker desktop which contains docker and docker-compose and a GUI to manage docker.
